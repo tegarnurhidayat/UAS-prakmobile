@@ -35,7 +35,7 @@ class _OnBoardState extends State<OnBoard> {
               children: [
                  GestureDetector(
               onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => Login(),
                 ));
               },

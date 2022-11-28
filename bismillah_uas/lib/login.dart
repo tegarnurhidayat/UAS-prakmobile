@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 
-
 class Login extends StatefulWidget {
   @override
   State<Login> createState() => _LoginState();
@@ -19,7 +18,7 @@ class _LoginState extends State<Login> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPass = TextEditingController();
 
-  // void login(String email, password) async {
+  // void test(String email, password) async {
   //   try {
   //     var response = await Dio().get('http://localhost:3004/user');
   //     var panjang_data = response.data.length;
@@ -27,7 +26,7 @@ class _LoginState extends State<Login> {
   //       for (var i = 0; i <= panjang_data; i++) {
   //         if (email == response.data[i]['email'] &&
   //             password == response.data[i]['password']) {
-  //           print("Login success");
+  //           print("test success");
   //           Navigator.push(
   //               context, MaterialPageRoute(builder: (context) => Home()));
   //           break;
@@ -37,7 +36,7 @@ class _LoginState extends State<Login> {
   //       final snackBar = SnackBar(
   //         backgroundColor: Colors.redAccent,
   //         content: Text(
-  //           'Login failed',
+  //           'test failed',
   //           style: TextStyle(
   //             fontFamily: 'Poppins-Regular',
   //             color: Colors.white,
@@ -73,91 +72,87 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios,
+            color: Colors.black,
+            
+            size: 30,
+            
+          ),
+          
+          onPressed: () => Navigator.pop(context) ,),
+          elevation: 0,
+            
+          
+          ),
+      body: Container(
         padding: EdgeInsets.symmetric(horizontal: 25, vertical: 23),
-        child: Column(
-          children: <Widget>[
-            Align(
-              alignment: Alignment.topLeft,
-              child: Column(
+        child: 
+               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  Text("Hello !", style: GoogleFonts.poppins(fontSize: 40, fontWeight: FontWeight.w600)),
+                  // SizedBox(height: ),
                   Text(
-                    "Hello !",
-                    style: GoogleFonts.poppins(fontSize: 25)
+                    "Sign in to continue",
+                    style: GoogleFonts.poppins(fontSize: 20, color: Colors.black),
                   ),
-                  SizedBox(height: 3),
-                  Text("Sign in to continue",
-                      style: GoogleFonts.poppins(fontSize: 15),),
-                ],
-              ),
-            ),
-            SizedBox(height: 25),
-            TextField(
+                  SizedBox(height: 25,),
+                  TextField(
               controller: controllerEmail,
-              style: TextStyle(
-                fontFamily: 'Poppins Light',
-                fontSize: 16,
-              ),
+              style: GoogleFonts.poppins(),
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                labelText: "Email Address",
-                hintText: "Email Address",
+                // border: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(10),
+                // ),
+                // labelText: "Email Address",
+                hintText: "email address",
                 contentPadding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-                hintStyle: TextStyle(
-                  fontFamily: 'Poppins Light',
-                  fontSize: 16,
-                ),
+                    EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                // hintStyle: TextStyle(
+                //   fontFamily: 'Poppins Light',
+                //   fontSize: 16,
+                // ),
               ),
             ),
-            SizedBox(height: 18),
+             SizedBox(height: 18),
             TextField(
               controller: controllerPass,
-              style: TextStyle(
-                fontFamily: 'Poppins Light',
-                fontSize: 16,
-              ),
+              style:
+              GoogleFonts.poppins(),
+                // fontFamily: 'Poppins Light',
+                // fontSize: 16,
+              
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                labelText: "Password",
-                hintText: "Password",
+                
+                // border: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(10),
+                // ),
+                // labelText: "Password",
+                hintText: "password",
                 contentPadding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-                hintStyle: TextStyle(
-                  fontFamily: 'Poppins Light',
-                  fontSize: 16,
-                ),
+                    EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                // hintStyle: TextStyle(
+                //   fontFamily: 'Poppins Light',
+                //   fontSize: 16,
+                // ),
               ),
             ),
-            SizedBox(height: 15),
-            // Align(
-            //   alignment: Alignment.topLeft,
-            //   child: Text(
-            //     "Forgot password?",
-            //     style: TextStyle(
-            //       color: orangeAccent,
-            //       fontSize: 16,
-            //       fontFamily: 'Poppins Light',
-            //     ),
-            //   ),
-            // ),
-            Spacer(),
+            SizedBox(height: 100,),
+            
             ElevatedButton(
               onPressed: () {
                 // login(controllerEmail.text, controllerPass.text);
               },
-              child: Text("SIGN IN",
-                  style: TextStyle(
-                    fontFamily: 'Poppins SemiBold',
-                    fontSize: 18,
-                  )),
+              child: Text("Sign in !",
+                  style: GoogleFonts.poppins(fontSize: 24)),
               style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 255, 255, 255),
-                  minimumSize: const Size.fromHeight(55),
+                  primary: Color.fromARGB(255, 0, 0, 0),
+                  minimumSize: const Size.fromHeight(50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   )),
@@ -166,11 +161,11 @@ class _LoginState extends State<Login> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?",
+                Text("New user?",
                     style: TextStyle(
                       fontFamily: 'Poppins Light',
                       fontSize: 16,
-                      color: Color.fromARGB(255, 255, 255, 255),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     )),
                 SizedBox(width: 7),
                 GestureDetector(
@@ -183,14 +178,17 @@ class _LoginState extends State<Login> {
                       style: TextStyle(
                         fontFamily: 'Poppins Light',
                         fontSize: 16,
-                        color: Color.fromARGB(255, 255, 255, 255),
+                        color: Color.fromARGB(255, 51, 155, 252),
                       )),
                 ),
               ],
             ),
-          ],
-        ),
-      ),
+
+                ],
+              ),
+              
+              
+            )
     );
   }
 }
