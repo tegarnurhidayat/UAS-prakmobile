@@ -1,0 +1,101 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Tegar Nur Hidayat",
+      "email": "tegar@gmail.com",
+      "password": "tegar"
+    },
+    {
+      "id": 2,
+      "name": "dadang",
+      "email": "dadang@gmail.com",
+      "password": "dadang"
+    },
+    {
+      "name": "Sujiman",
+      "email": "suji@gmail.com",
+      "password": "suji",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "test",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "title": "Bust of Apollo",
+      "harga": "300.000.000",
+      "person": "Alif Cepmek",
+      "start_bid": "Desember 1st, 2022",
+      "status": "ongoing",
+      "image": "https://cdn.shopify.com/s/files/1/1551/9675/products/001-SCRO4401010-apollo-bust-sculpture-large_1024x1024_1024x1024_square_714b6cc2-50ae-4f1e-92bb-657e93e1359f_800x.jpg?v=1664778924",
+      "deskripsi": "A bust of Apollo Belvedere is a prominent feature of Charles Bird King's 1835 still life The Vanity of the Artist's Dream, which depicts the struggle of classically trained artists to be relevant in the 19th century."
+    },
+    {
+      "id": 2,
+      "title": "Bald and Brash",
+      "harga": "75.000.000",
+      "person": "Dilan Bekasi",
+      "start_bid": "Desember 12nd, 2022",
+      "status": "ongoing",
+      "image": "https://m.media-amazon.com/images/I/71DK42JoQwL.jpg",
+      "deskripsi": "tastelessly or offensively loud, showy, or bold. hasty; rash."
+    },
+    {
+      "id": 3,
+      "title": "Fine Jewels",
+      "harga": "20.000.000",
+      "person": "Muhammad Sumbul",
+      "start_bid": "Desember 17th, 2022",
+      "status": "upcoming",
+      "image": "https://sothebys-com.brightspotcdn.com/dims4/default/2a5a60e/2147483647/strip/true/crop/600x687+0+6/resize/330x378!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F30%2F6e%2F9082c6f340afb61f5e513a32de33%2F221218952-luxuryweek-nov22-600x700-magjewels.jpg",
+      "deskripsi": "Discover classic staples for everyday wear including diamond studs, eternity bands and engagement rings, or shop big and bold with gold bracelets and necklaces by renowned makers such as David Webb and Bulgari."
+    },
+    {
+      "id": 4,
+      "title": "Books and Manuscripts, \nMedieval to Modern",
+      "harga": "57.000.000",
+      "person": "Khalid Alkatiri",
+      "start_bid": "Desember 19th, 2022",
+      "status": "upcoming",
+      "image": "https://sothebys-com.brightspotcdn.com/dims4/default/f017271/2147483647/strip/true/crop/600x687+0+6/resize/330x378!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2Ffc%2Fd7%2F9d7471bb4c7ebd43e81bf01fdee9%2Fl22408-calendar.jpg",
+      "deskripsi": "Our December auction is led by a consignment of fine books from a private Scottish library which includes an unusually fine copy of the rare first edition of Mary Shelley’s Frankenstein, as well as Burns’s Poems, Chiefly in the Scottish Dialect (Kilmarnock, 1786), the Beckford copy of Cook’s Voyages (1773-88), Robinson Crusoe (1719-20), a binding produced for Mary, Queen of Scots, and other fine books."
+    },
+    {
+      "id": 5,
+      "title": "European & British Art",
+      "harga": "100.000.000",
+      "person": "Kuskus Syahbandi",
+      "start_bid": "Desember 21st, 2022",
+      "status": "ongoing",
+      "image": "https://sothebys-com.brightspotcdn.com/dims4/default/556f4f8/2147483647/strip/true/crop/600x687+0+0/resize/330x378!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F99%2F1c%2Fdabf4e4a4412b204cb626922bbee%2Fl22102-cfkpf-t3-01a.jpg-cal.jpg",
+      "deskripsi": "Our winter sale encompasses art from Britain and mainland Europe, demonstrating the wide-ranging fascinations of nineteenth and twentieth century artists, from still-life to portraiture, the depiction of animals and landscapes to romantic or realistic depictions of human life."
+    },
+    {
+      "title": "Krabs Figure",
+      "harga": "IDR 150.000.000",
+      "person": "Eugene Krabs",
+      "start_bid": "Januari 13rd, 2023",
+      "status": "upcoming",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Mr._Krabs.svg/800px-Mr._Krabs.svg.png",
+      "deskripsi": "Lorem ",
+      "id": 6
+    },
+    {
+      "title": "Ini produk",
+      "harga": "IDR 10.000",
+      "person": "Asep",
+      "start_bid": "December 29th 2022",
+      "status": "upcoming",
+      "image": "https://media.discordapp.net/attachments/884342746800869416/1051829055990804550/bust2.png",
+      "deskripsi": "ini cuma test aja bang",
+      "id": 7
+    }
+    
+  ]
+}

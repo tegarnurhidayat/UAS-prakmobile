@@ -18,64 +18,78 @@ class _OnBoardState extends State<OnBoard> {
     return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: true,
-        body: 
-        Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              
-          // mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Padding(padding: EdgeInsets.fromLTRB(0,188.50,0,0))
-            ,Image.asset('assets/aumabaru.png'),
-            SizedBox(height: 12,),
-            Text("   Whether you sell or buy,\n   the auction is all yours", style: GoogleFonts.poppins(fontSize: 22, fontWeight: FontWeight.w500 )),
-            SizedBox(height: 20,),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                 GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => Login(),
-                ));
-              },
-              child: Text("   Log in",
-            style: GoogleFonts.poppins(fontSize: 22),),
-            ),
-            SizedBox(height: 20,),
-             GestureDetector(
-              onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => Register(),
-                ));
-              },
-              child: Text("   Sign up",
-            style: GoogleFonts.poppins(fontSize: 22),),
-            ),
-              ],
-            ),
-            // Stack(
-            //   children: <Widget>[
-            //     Positioned(bottom: 0, right: 0,
-            //     child: Image.asset('assets/camera.png'),)
-            //   ],
-            // ),
-            Align(alignment: Alignment.topRight,
-            child: Container(margin: EdgeInsets.only(),
-            child: (Image.asset('assets/camera.png')),))
-
-            // Align(alignment: Alignment.centerLeft,
-            // child: Column(children: <Widget>[
-            //   Text("data")
-            // ]),)
-            // Align(alignment: Alignment.centerLeft,
-            // child: Column(children: <Widget>[ Text("Whether you sell or buy,\n the auction is all yours", style: GoogleFonts.poppins(fontSize: 22))]),)
-           
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(height: 150),
+              Image.asset('assets/aumabaru.png'),
+              SizedBox(
+                height: 12,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Whether you sell or buy,\nthe auction is all yours",
+                        style: GoogleFonts.poppins(
+                            fontSize: 22, fontWeight: FontWeight.w500)),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Login(),
+                        ));
+                      },
+                      child: Text(
+                        "Log in",
+                        style: GoogleFonts.poppins(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Container(
+                      height: 2,
+                      width: 62,
+                      color: Color.fromARGB(255, 31, 31, 31),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => Register(),
+                        ));
+                      },
+                      child: Text(
+                        "Sign up",
+                        style: GoogleFonts.poppins(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Spacer(),
+              Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    height: 250,
+                    width: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/camera.png"),
+                            fit: BoxFit.cover)),
+                  ))
             ],
-          
+          ),
         ),
-        ),
-        
       ),
     );
   }
