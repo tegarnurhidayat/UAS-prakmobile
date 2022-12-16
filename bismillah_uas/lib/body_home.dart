@@ -2,8 +2,11 @@ import 'package:bismillah_uas/detail.dart';
 import 'package:bismillah_uas/homepage.dart';
 import 'package:bismillah_uas/models/product.dart';
 import 'package:bismillah_uas/models/user.dart';
+import 'package:bismillah_uas/profile.dart';
 import 'package:bismillah_uas/services/services.dart';
 import 'package:flutter/material.dart';
+import 'package:bismillah_uas/ongoing.dart';
+import 'package:bismillah_uas/upcoming.dart';
 
 class BodyHome extends StatefulWidget {
   final User user;
@@ -38,81 +41,85 @@ class _BodyHomeState extends State<BodyHome> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            Icon(Icons.person),
-                            SizedBox(
-                              height: 60,
-                            )
-                          ],
-                        ),
-                        SizedBox(width: 15),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              widget.user.name,
-                              style: TextStyle(
-                                fontFamily: 'Poppins-Regular',
-                                fontSize: 23,
-                                fontWeight: FontWeight.w500,
-                                color: Color.fromARGB(255, 0, 0, 0),
+                child: 
+                GestureDetector(
+                           onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Profile(user: widget.user))),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Icon(Icons.person),
+                              SizedBox(
+                                height: 60,
+                              )
+                            ],
+                          ),
+                          SizedBox(width: 15),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                widget.user.name,
+                                style: TextStyle(
+                                  fontFamily: 'Poppins-Regular',
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              height: 7,
-                            ),
-                            Text(
-                              'Your Wallet',
-                              style: TextStyle(
-                                fontFamily: 'Poppins-Regular',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Color.fromARGB(255, 0, 0, 0),
+                              SizedBox(
+                                height: 7,
                               ),
-                            ),
-                            SizedBox(height: 8),
-                            Row(
-                              children: [
-                                Text(
-                                  'IDR 2.500.000',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins-Regular',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 32, 32, 32),
-                                  ),
+                              Text(
+                                'Your Wallet',
+                                style: TextStyle(
+                                  fontFamily: 'Poppins-Regular',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Color.fromARGB(255, 0, 0, 0),
                                 ),
-                                SizedBox(width: 35),
-                                Text(
-                                  'Withdrawn | ',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins-Regular',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 93, 92, 92),
+                              ),
+                              SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Text(
+                                    'IDR 2.500.000',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins-Regular',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 32, 32, 32),
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  'Top up',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins-Regular',
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color.fromARGB(255, 93, 92, 92),
+                                  SizedBox(width: 35),
+                                  Text(
+                                    'Withdrawn | ',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins-Regular',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 93, 92, 92),
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    )
-                  ],
+                                  Text(
+                                    'Top up',
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins-Regular',
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromARGB(255, 93, 92, 92),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -129,13 +136,16 @@ class _BodyHomeState extends State<BodyHome> {
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
-                Text(
-                  'See more >',
-                  style: TextStyle(
-                    fontFamily: 'Poppins-Regular',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(255, 75, 75, 75),
+                GestureDetector(
+                   onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Ongoing())),
+                  child: Text(
+                    'See more >',
+                    style: TextStyle(
+                      fontFamily: 'Poppins-Regular',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 75, 75, 75),
+                    ),
                   ),
                 ),
               ],
@@ -220,13 +230,16 @@ class _BodyHomeState extends State<BodyHome> {
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
-                Text(
-                  'See more >',
-                  style: TextStyle(
-                    fontFamily: 'Poppins-Regular',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                    color: Color.fromARGB(255, 75, 75, 75),
+                GestureDetector(
+                   onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Upcoming())),
+                  child: Text(
+                    'See more >',
+                    style: TextStyle(
+                      fontFamily: 'Poppins-Regular',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 75, 75, 75),
+                    ),
                   ),
                 ),
               ],

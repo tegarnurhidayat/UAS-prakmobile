@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 class Service {
   static Future<List<Product>> fetchProducts() async {
-    Response response = await Dio().get("http://192.168.0.120:3000/product");
+    Response response = await Dio().get("http://192.168.31.201:3000/product");
     List<Product> products =
         (response.data as List).map((v) => Product.fromJSON(v)).toList();
     return products;
@@ -11,7 +11,7 @@ class Service {
 
   static Future<List<Product>> fetchProductsBasedOnType(String status) async {
     Response response =
-        await Dio().get("http://192.168.0.120:3000/product?status=" + status);
+        await Dio().get("http://192.168.31.201:3000/product?status=" + status);
     List<Product> products =
         (response.data as List).map((v) => Product.fromJSON(v)).toList();
     return products;
@@ -21,7 +21,7 @@ class Service {
       String title, harga, person, start_bid, status, image, desc) async {
     try {
       Response response =
-          await Dio().post("http://192.168.0.120:3000/product", data: {
+          await Dio().post("http://192.168.31.201:3000/product", data: {
         'title': title,
         'harga': harga,
         'person': person,

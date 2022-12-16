@@ -21,10 +21,14 @@ class _RegisterState extends State<Register> {
 
   void register(String name, email, password) async {
     try {
-      var response = await Dio().post('http://192.168.0.120:3000/users',
+      var response = await Dio().post('http://192.168.31.201:3000/users',
           data: {"name": name, "email": email, "password": password});
       if (response.statusCode == 201) {
         print("Account created successfully");
+         Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Login()));
       } else {
         print("Failed");
         // dah bang, co
@@ -141,6 +145,7 @@ class _RegisterState extends State<Register> {
                     minimumSize: const Size.fromHeight(50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
+                    
                     )),
               ),
               SizedBox(height: 10),

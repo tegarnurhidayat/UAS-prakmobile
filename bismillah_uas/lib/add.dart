@@ -66,7 +66,7 @@ class _AddState extends State<Add> {
                           borderSide: BorderSide(
                               color: Color.fromARGB(255, 62, 62, 62),
                               width: 1)),
-                      hintText: 'IDR 10.000.000',
+                      hintText: '10.000.000',
                       contentPadding: EdgeInsets.symmetric(horizontal: 5),
                       hintStyle: TextStyle(
                           fontFamily: 'OpenSans-Light',
@@ -120,7 +120,7 @@ class _AddState extends State<Add> {
                           borderSide: BorderSide(
                               color: Color.fromARGB(255, 62, 62, 62),
                               width: 1)),
-                      hintText: 'Ongoing / Upcoming',
+                      hintText: 'ongoing / upcoming',
                       contentPadding: EdgeInsets.symmetric(horizontal: 5),
                       hintStyle: TextStyle(
                           fontFamily: 'OpenSans-Light',

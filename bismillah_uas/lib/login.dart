@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
   void login(String email, password) async {
     try {
       var response = await Dio().get(
-          'http://192.168.0.120:3000/users?email=' +
+          'http://192.168.31.201:3000/users?email=' +
               email +
               "&password=" +
               password);
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
         String password = response.data?[0]['password'];
 
         print("Login success");
-        Navigator.push(
+        Navigator.pushReplacement(
             context,
             MaterialPageRoute(
                 builder: (context) => HomePage(

@@ -16,6 +16,7 @@ class _OnBoardState extends State<OnBoard> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: true,
         body: Container(
@@ -63,7 +64,7 @@ class _OnBoardState extends State<OnBoard> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => Register(),
                         ));
                       },

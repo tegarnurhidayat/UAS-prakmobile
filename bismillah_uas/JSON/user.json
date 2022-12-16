@@ -23,6 +23,12 @@
       "email": "test@gmail.com",
       "password": "test",
       "id": 4
+    },
+    {
+      "name": "aaa",
+      "email": "aaa",
+      "password": "aaa",
+      "id": 5
     }
   ],
   "product": [
@@ -58,7 +64,7 @@
     },
     {
       "id": 4,
-      "title": "Books and Manuscripts, \nMedieval to Modern",
+      "title": "Medieval to Modern",
       "harga": "57.000.000",
       "person": "Khalid Alkatiri",
       "start_bid": "Desember 19th, 2022",
@@ -67,35 +73,34 @@
       "deskripsi": "Our December auction is led by a consignment of fine books from a private Scottish library which includes an unusually fine copy of the rare first edition of Mary Shelley’s Frankenstein, as well as Burns’s Poems, Chiefly in the Scottish Dialect (Kilmarnock, 1786), the Beckford copy of Cook’s Voyages (1773-88), Robinson Crusoe (1719-20), a binding produced for Mary, Queen of Scots, and other fine books."
     },
     {
-      "id": 5,
-      "title": "European & British Art",
-      "harga": "100.000.000",
-      "person": "Kuskus Syahbandi",
-      "start_bid": "Desember 21st, 2022",
-      "status": "ongoing",
-      "image": "https://sothebys-com.brightspotcdn.com/dims4/default/556f4f8/2147483647/strip/true/crop/600x687+0+0/resize/330x378!/format/webp/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2F99%2F1c%2Fdabf4e4a4412b204cb626922bbee%2Fl22102-cfkpf-t3-01a.jpg-cal.jpg",
-      "deskripsi": "Our winter sale encompasses art from Britain and mainland Europe, demonstrating the wide-ranging fascinations of nineteenth and twentieth century artists, from still-life to portraiture, the depiction of animals and landscapes to romantic or realistic depictions of human life."
-    },
-    {
-      "title": "Krabs Figure",
-      "harga": "IDR 150.000.000",
-      "person": "Eugene Krabs",
-      "start_bid": "Januari 13rd, 2023",
-      "status": "upcoming",
-      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Mr._Krabs.svg/800px-Mr._Krabs.svg.png",
-      "deskripsi": "Lorem ",
-      "id": 6
-    },
-    {
       "title": "Ini produk",
-      "harga": "IDR 10.000",
+      "harga": "10.000",
       "person": "Asep",
       "start_bid": "December 29th 2022",
       "status": "upcoming",
       "image": "https://media.discordapp.net/attachments/884342746800869416/1051829055990804550/bust2.png",
       "deskripsi": "ini cuma test aja bang",
+      "id": 5
+    },
+    {
+      "title": "test",
+      "harga": "50.000.000",
+      "person": "Test Test",
+      "start_bid": "December, 14th 2022",
+      "status": "ongoing",
+      "image": "https://media.discordapp.net/attachments/884342746800869416/1052933547381497946/141773908_1_x.png?width=660&height=660",
+      "deskripsi": "in cuma test",
+      "id": 6
+    },
+    {
+      "title": "test",
+      "harga": "299292",
+      "person": "tree st",
+      "start_bid": "jdie",
+      "status": "ongoing",
+      "image": "kskskss",
+      "deskripsi": "test",
       "id": 7
     }
-    
   ]
 }
